@@ -21,7 +21,6 @@ public class Consumer {
         this.topics = topics;
     }
 
-
     public KafkaConsumer getConsumer() {
         Properties props = new Properties();
         props.setProperty("bootstrap.servers", "localhost:9092");
@@ -65,7 +64,6 @@ public class Consumer {
             newList.append(topic+",");
         }
         System.out.println("NEW TOPICS subscribed:"+newList);
-
     }
 
     @KafkaListener(topics = {"india", "egypt", "singapore"}, groupId = "group_id")
