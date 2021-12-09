@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD india/target/india-0.0.1-SNAPSHOT.jar india.jar
+ENTRYPOINT ["java", "-jar","india.jar"]
+EXPOSE 8050

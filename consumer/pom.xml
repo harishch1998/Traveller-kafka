@@ -8,10 +8,10 @@
 		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.kafka.consumer</groupId>
-	<artifactId>consumer</artifactId>
+	<groupId>com.kafka.consumer10</groupId>
+	<artifactId>consumer10</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>consumer</name>
+	<name>consumer10</name>
 	<description>Consumer application for kafka</description>
 	<properties>
 		<java.version>11</java.version>

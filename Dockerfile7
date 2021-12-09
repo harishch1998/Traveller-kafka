@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD consumer/target/consumer7-0.0.1-SNAPSHOT.jar consumer7.jar
+ENTRYPOINT ["java", "-jar","consumer7.jar"]
+EXPOSE 8086

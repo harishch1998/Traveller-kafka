@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD singapore/target/singapore-0.0.1-SNAPSHOT.jar singapore.jar
+ENTRYPOINT ["java", "-jar","singapore.jar"]
+EXPOSE 8070

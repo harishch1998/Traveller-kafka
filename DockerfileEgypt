@@ -1,0 +1,4 @@
+FROM openjdk:11
+ADD egypt/target/egypt-0.0.1-SNAPSHOT.jar egypt.jar
+ENTRYPOINT ["java", "-jar","egypt.jar"]
+EXPOSE 8060
