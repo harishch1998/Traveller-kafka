@@ -282,112 +282,112 @@ services:
     networks:
      - kafka-cluster
 
-# consumer-6:
-#   image: consumer6.jar
-#   build:
-#     context: ./
-#     dockerfile: Dockerfile6
-#   container_name: consumer-6
-#   deploy:
-#     resources:
-#       limits:
-#         cpus: '0.50'
-#         memory: 512M
-#       reservations:
-#         cpus: '0.25'
-#         memory: 128M
-#   environment:
-#     - SERVER_PORT = 8085
-#     - CONSUMER_GROUP = group_6
-#   ports:
-#     - "8085:8085"
-#   networks:
-#     - kafka-cluster
-#
-# consumer-7:
-#   image: consumer7.jar
-#   build:
-#     context: ./
-#     dockerfile: Dockerfile7
-#   container_name: consumer-7
-#   deploy:
-#     resources:
-#       limits:
-#         cpus: '0.50'
-#         memory: 512M
-#       reservations:
-#         cpus: '0.25'
-#         memory: 128M
-#   environment:
-#     - SERVER_PORT = 8086
-#     - CONSUMER_GROUP = group_7
-#   ports:
-#     - "8086:8086"
-#   networks:
-#     - kafka-cluster
-#
-# consumer-8:
-#   image: consumer8.jar
-#   build:
-#     context: ./
-#     dockerfile: Dockerfile8
-#   container_name: consumer-8
-#   deploy:
-#     resources:
-#       limits:
-#         cpus: '0.50'
-#         memory: 512M
-#       reservations:
-#         cpus: '0.25'
-#         memory: 128M
-#   environment:
-#     - SERVER_PORT = 8087
-#     - CONSUMER_GROUP = group_8
-#   ports:
-#     - "8087:8087"
-#   networks:
-#     - kafka-cluster
-#
-# consumer-9:
-#   image: consumer9.jar
-#   build:
-#     context: ./
-#     dockerfile: Dockerfile9
-#   container_name: consumer-9
-#   deploy:
-#     resources:
-#       limits:
-#         cpus: '0.50'
-#         memory: 512M
-#       reservations:
-#         cpus: '0.25'
-#         memory: 128M
-#   environment:
-#     - SERVER_PORT = 8088
-#     - CONSUMER_GROUP = group_9
-#   ports:
-#     - "8088:8088"
-#   networks:
-#     - kafka-cluster
-#
-# consumer-10:
-#   image: consumer10.jar
-#   build:
-#     context: ./
-#     dockerfile: Dockerfile10
-#   container_name: consumer-10
-#   deploy:
-#     resources:
-#       limits:
-#         cpus: '0.50'
-#         memory: 512M
-#       reservations:
-#         cpus: '0.25'
-#         memory: 128M
-#   environment:
-#     - SERVER_PORT = 8089
-#     - CONSUMER_GROUP = group_10
-#   ports:
-#     - "8089:8089"
-#   networks:
-#     - kafka-cluster
+  consumer-6:
+    image: consumer6.jar
+    build:
+      context: ./
+      dockerfile: Dockerfile6
+    container_name: consumer-6
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      - SERVER_PORT = 8085
+      - CONSUMER_GROUP = group_6
+    ports:
+      - "8085:8085"
+    networks:
+      - kafka-cluster
+
+  consumer-7:
+    image: consumer7.jar
+    build:
+      context: ./
+      dockerfile: Dockerfile7
+    container_name: consumer-7
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      - SERVER_PORT = 8086
+      - CONSUMER_GROUP = group_7
+    ports:
+      - "8086:8086"
+    networks:
+      - kafka-cluster
+
+  consumer-8:
+    image: consumer8.jar
+    build:
+      context: ./
+      dockerfile: Dockerfile8
+    container_name: consumer-8
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      - SERVER_PORT = 8087
+      - CONSUMER_GROUP = group_8
+    ports:
+      - "8087:8087"
+    networks:
+      - kafka-cluster
+
+  consumer-9:
+    image: consumer9.jar
+    build:
+      context: ./
+      dockerfile: Dockerfile9
+    container_name: consumer-9
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      - SERVER_PORT = 8088
+      - CONSUMER_GROUP = group_9
+    ports:
+      - "8088:8088"
+    networks:
+      - kafka-cluster
+
+  consumer-10:
+    image: consumer10.jar
+    build:
+      context: ./
+      dockerfile: Dockerfile10
+    container_name: consumer-10
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    environment:
+      - SERVER_PORT = 8089
+      - CONSUMER_GROUP = group_10
+    ports:
+      - "8089:8089"
+    networks:
+      - kafka-cluster

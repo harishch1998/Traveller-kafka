@@ -35,7 +35,12 @@ public class Consumer {
 
     public void subscribe(List<String> subTopics){
         //updating topics for consumer
-        setTopics(subTopics.stream().collect(Collectors.toSet()));
+        Set<String> topicsSubscribed = consumer.subscription();
+        Set<String> finalTopics = subTopics.stream().collect(Collectors.toSet());
+        for(String topic : topicsSubscribed) {
+            finalTopics.add(topic);
+        }
+        setTopics(finalTopics);
         StringBuilder sb = new StringBuilder();
         for(String topic : topics)
             sb.append(topic+",");
@@ -69,7 +74,6 @@ public class Consumer {
 
     @KafkaListener(topics = {"india", "egypt", "singapore"}, groupId = "group_10")
     public void listen(String message) {
-        System.out.println("got message using listener: " + message);
         synchronized (messages) {
             String[] splitMessage = message.split("\\|");
             if(topics.contains(splitMessage[0].trim())) {
@@ -82,6 +86,10 @@ public class Consumer {
     public List<String> getMessages() {
         System.out.println("Returning messages: " + messages.size());
         return messages;
+    }
+
+    public List<String> getTopics() {
+        return new ArrayList<>(topics);
     }
 
 }
